@@ -77,7 +77,9 @@
 	
 	/* logo */
     .top-content .logo a {
-    	background-image: url(../img/logo@2x.png) !important; background-repeat: no-repeat !important; background-size: 207px 74px !important;
+    	background-image: url(../img/logo@2x.png) !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
     }
 	
 }
