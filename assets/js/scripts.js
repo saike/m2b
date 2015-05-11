@@ -143,6 +143,62 @@ jQuery(document).ready(function() {
 	        }
 	    });
 	});
+
+  //our code
+  var gif = document.createElement('img');
+  gif.src = 'assets/img/screens/animation.gif';
+  $(gif).addClass('gif_screen');
+  $(gif).on('load', function(){
+    $('.phone_keeper').append(gif);
+  });
+
+  //cheats
+  function rotate (elm) {
+
+    var plusOrMinus, randAngle, randDelay;
+
+    var $rota = $(elm),
+      degree = 0,
+      timer;
+
+    function spin() {
+      $rota.css({ transform: 'rotate(' + degree + 'deg) scale(' + (Math.random() * (2 - 0.5) + 0.5) +')', zIndex: (Math.random() * 100) });   // rotate element
+      plusOrMinus = Math.random() < 0.5 ? -1 : 1;       // random spin direction
+      randAngle = Math.floor(Math.random()*70+50) * plusOrMinus; // random degrees
+      randDelay = Math.floor(Math.random()*3000);  //random delay
+      timer = setTimeout(function() {  // set delay
+        degree += randAngle;  // add random degree to current variable
+        spin(); // loop it
+      },randDelay);
+    }
+
+    spin();    // start first spin for element
+
+  }
+
+  var cheatStreak = '';
+
+  $(document).on('keyup', function (e) {
+    if (cheatStreak.length > 30) cheatStreak = '';
+    if (e.keyCode <= 90 && e.keyCode >= 65) {
+      cheatStreak += String.fromCharCode(e.keyCode);
+    }
+    activateCheat(cheatStreak);
+  });
+
+  function activateCheat(phrase){
+    if(phrase.indexOf('BABOS') >= 0) {
+      $.each($('div,p,span,a,img,section,h1,h2'), function(k,v){
+        rotate(v);
+        $(v).addClass('cheat_item');
+      });
+      cheatStreak = '';
+    }
+  }
+
+
     
 });
+
+
 
