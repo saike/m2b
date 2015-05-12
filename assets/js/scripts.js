@@ -149,7 +149,7 @@ jQuery(document).ready(function() {
   gif.src = 'assets/img/screens/animation.gif';
   $(gif).addClass('gif_screen');
   $(gif).on('load', function(){
-    $('.phone_keeper').append(gif);
+    $('.phone_keeper.gif').append(gif);
   });
 
   //cheats

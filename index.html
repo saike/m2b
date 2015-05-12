@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600">
   <!--<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,700">-->
-  <link href='//fonts.googleapis.com/css?family=Ubuntu&subset=cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="assets/css/animate.css">
@@ -41,13 +41,12 @@
 
 <!-- Top menu -->
 <nav>
-  <a class="scroll-link" href="#top-content">Top</a>
-  <a class="scroll-link" href="#features">Features</a>
-  <a class="scroll-link" href="#faq">Faq</a>
-  <a class="scroll-link" href="#testimonials">Testimonials</a>
-  <a class="scroll-link" href="#about-us">About</a>
-  <a class="scroll-link" href="#subscribe">Subscribe</a>
-  <a class="scroll-link" href="#contact">Contact</a>
+  <a class="scroll-link" href="#top-content">Главная</a>
+  <a class="scroll-link" href="#features">Преимущества</a>
+  <!--<a class="scroll-link" href="#faq">Faq</a>-->
+  <a class="scroll-link" href="#single-feature">Кейс</a>
+  <a class="scroll-link" href="#subscribe">Презентация</a>
+  <a class="scroll-link" href="#contact">Контакты</a>
   <div class="hide-menu">
     <a href=""><i class="fa fa-bars"></i></a>
   </div>
@@ -62,14 +61,16 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-5 phone wow fadeInLeft">
-          <div class="phone_keeper">
+          <div class="phone_keeper gif">
             <img src="assets/img/iphone-1.png" alt="">
             <!--<img class="gif_screen" src="assets/img/screens/animation.gif" alt=""/>-->
           </div>
         </div>
         <div class="col-sm-7 text wow fadeInUp">
           <div class="logo">
-            <a href="">Aeria - Responsive App Landing Page</a>
+            <a href="">
+              <img class="logo_svg" src="assets/img/logo.svg" alt="m2b"/>
+            </a>
           </div>
           <h1 style="text-transform: none; font-size: 45px;">Полноценный запуск <br/> мобильного магазина <br/>
             только что стал доступнее.</h1>
@@ -89,7 +90,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 features section-description wow fadeIn">
-        <h2>преимущества нашего решения</h2>
+        <h2>преимущества решения</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
           labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
@@ -127,16 +128,19 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 single-feature section-description wow fadeIn">
-        <h2>Easy To Use</h2>
+        <h2>Реальный пример</h2>
         <p>
-          Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-          aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud.
+          Результаты приложения бренда <strong>Piquadro</strong> <br/> за первые два месяца после запуска решения M2B: <br/>
+          загрузки: <strong>3000</strong>, конверсия: <strong>2,9%</strong>, средний чек: <strong>12 000 руб.</strong>, оборот <strong>1 879 200 руб.</strong>
         </p>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-12 single-feature-box wow fadeInDown">
-        <img src="assets/img/iphone-2.png" alt="">
+        <div class="phone_keeper">
+          <img src="assets/img/iphone-2.png" alt="">
+          <img class="inner_screen" src="assets/img/screens/screen_2.png" alt=""/>
+        </div>
       </div>
     </div>
   </div>
@@ -147,309 +151,312 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 single-feature section-description wow fadeIn">
-        <h2>Awesome Design</h2>
+        <h2>С ЧЕГО НАЧАТЬ?</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+          Успешный и безболезненный запуск мобильного канала продаж возможен. <br/>
+          Результат на выходе - больше продаж при том же рекламном бюджете.
         </p>
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-12 single-feature-box wow fadeInDown">
-        <img src="assets/img/iphone-3.png" alt="">
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Single feature -->
-<div class="single-feature-container section-container section-container-full-bg">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 single-feature section-description wow fadeIn">
-        <h2>Cloud Based</h2>
-        <p>
-          Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-          aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud.
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12 single-feature-box wow fadeInDown">
-        <img src="assets/img/iphone-2.png" alt="">
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- FAQ -->
-<div class="faq-container section-container">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 faq section-description wow fadeIn">
-        <h2>Frequent questions</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6 faq-box wow fadeInLeft">
-        <div class="single-faq">
-          <h3>Ut wisi enim ad minim veniam, quis nostrud?</h3>
-          <span><i class="fa fa-plus"></i></span>
-          <div class="single-faq-text">
-            <p>
-              Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-              aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.
-            </p>
-          </div>
-        </div>
-        <div class="single-faq">
-          <h3>Lorem ipsum dolor sit amet, consectetur?</h3>
-          <span><i class="fa fa-plus"></i></span>
-          <div class="single-faq-text">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-            </p>
-          </div>
-        </div>
-        <div class="single-faq">
-          <h3>Quis nostrud exerci tation ullamcorper sus?</h3>
-          <span><i class="fa fa-plus"></i></span>
-          <div class="single-faq-text">
-            <p>
-              Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-              aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud.
-            </p>
-            <p>
-              Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-              aliquip ex ea commodo consequat.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 faq-box wow fadeInUp">
-        <div class="single-faq">
-          <h3>Sed do eiusmod tempor incididunt ut labore?</h3>
-          <span><i class="fa fa-plus"></i></span>
-          <div class="single-faq-text">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-            </p>
-          </div>
-        </div>
-        <div class="single-faq">
-          <h3>Quis nostrud exerci tation ullamcorper suscip?</h3>
-          <span><i class="fa fa-plus"></i></span>
-          <div class="single-faq-text">
-            <p>
-              Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-              aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud.
-            </p>
-            <p>
-              Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-              aliquip ex ea commodo consequat.
-            </p>
-          </div>
-        </div>
-        <div class="single-faq">
-          <h3>Ut wisi enim ad minim veniam, quis nostrud?</h3>
-          <span><i class="fa fa-plus"></i></span>
-          <div class="single-faq-text">
-            <p>
-              Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-              aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.
-            </p>
-          </div>
+      <div class="col-sm-12 single-feature-box wow fadeInDown clearfix">
+        <div class="phone_keeper">
+          <img src="assets/img/iphone-4.png" alt="">
+          <img class="inner_screen" style="top: 15.4%; left: 9.2%; width: 82.2%; height: 70.3%; border-radius: 2px;" src="assets/img/screens/client_screen_1.jpg" alt=""/>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Call to action -->
-<div class="call-to-action-container section-container section-container-full-bg">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 call-to-action section-description wow fadeIn">
-        <h2>Download it now</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12 call-to-action-button wow fadeInUp">
-        <a class="button-1" href="#">
-          <span class="button-1-left"><i class="fa fa-mobile"></i></span>
-                         	<span class="button-1-right">
-                         		<span class="button-1-right-top">Available on the</span>
-                         		<span class="button-1-right-bottom">App Store</span>
-                         	</span>
-        </a>
-        <a class="button-2" href="#">
-          <span class="button-2-left"><i class="fa fa-android"></i></span>
-                         	<span class="button-2-right">
-                         		<span class="button-2-right-top">Get it now for</span>
-                         		<span class="button-2-right-bottom">Android</span>
-                         	</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
+<!--&lt;!&ndash; Single feature &ndash;&gt;-->
+<!--<div class="single-feature-container section-container section-container-full-bg">-->
+  <!--<div class="container">-->
+    <!--<div class="row">-->
+      <!--<div class="col-sm-12 single-feature section-description wow fadeIn">-->
+        <!--<h2>Cloud Based</h2>-->
+        <!--<p>-->
+          <!--Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut-->
+          <!--aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud.-->
+        <!--</p>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+      <!--<div class="col-sm-12 single-feature-box wow fadeInDown">-->
+        <!--<img src="assets/img/iphone-2.png" alt="">-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
 
-<!-- Testimonials -->
-<div class="testimonials-container section-container">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 testimonials section-description wow fadeIn">
-        <h2>Our clients</h2>
-        <div class="testimonial-active"></div>
-        <div class="testimonial-quote">&ldquo; &rdquo;</div>
-        <div class="testimonial-single">
-          <p>
-            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-            lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam,
-            quis nostrud exerci tation ullamcorper suscipit lobortis nisl.
-            <br>
-            <a href="">John Doe, johndoe.com</a>
-          </p>
-          <div class="testimonial-single-image">
-            <img src="assets/img/testimonials/1.jpg" alt="" data-at2x="assets/img/testimonials/1.jpg">
-          </div>
-        </div>
-        <div class="testimonial-single">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-            ut labore et. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et.
-            <br>
-            <a href="">Jane Jonsson, blog.jane.com</a>
-          </p>
-          <div class="testimonial-single-image">
-            <img src="assets/img/testimonials/2.jpg" alt="" data-at2x="assets/img/testimonials/2.jpg">
-          </div>
-        </div>
-        <div class="testimonial-single">
-          <p>
-            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-            lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam,
-            quis nostrud exerci tation ullamcorper suscipit lobortis nisl.
-            <br>
-            <a href="">John Doe, johndoe.com</a>
-          </p>
-          <div class="testimonial-single-image">
-            <img src="assets/img/testimonials/3.jpg" alt="" data-at2x="assets/img/testimonials/3.jpg">
-          </div>
-        </div>
-        <div class="testimonial-single">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-            ut labore et. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et.
-            <br>
-            <a href="">Jane Jonsson, blog.jane.com</a>
-          </p>
-          <div class="testimonial-single-image">
-            <img src="assets/img/testimonials/4.jpg" alt="" data-at2x="assets/img/testimonials/4.jpg">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<!--&lt;!&ndash; FAQ &ndash;&gt;-->
+<!--<div class="faq-container section-container">-->
+  <!--<div class="container">-->
+    <!--<div class="row">-->
+      <!--<div class="col-sm-12 faq section-description wow fadeIn">-->
+        <!--<h2>Frequent questions</h2>-->
+        <!--<p>-->
+          <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut-->
+          <!--labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.-->
+        <!--</p>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+      <!--<div class="col-sm-6 faq-box wow fadeInLeft">-->
+        <!--<div class="single-faq">-->
+          <!--<h3>Ut wisi enim ad minim veniam, quis nostrud?</h3>-->
+          <!--<span><i class="fa fa-plus"></i></span>-->
+          <!--<div class="single-faq-text">-->
+            <!--<p>-->
+              <!--Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut-->
+              <!--aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.-->
+            <!--</p>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="single-faq">-->
+          <!--<h3>Lorem ipsum dolor sit amet, consectetur?</h3>-->
+          <!--<span><i class="fa fa-plus"></i></span>-->
+          <!--<div class="single-faq-text">-->
+            <!--<p>-->
+              <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut-->
+              <!--labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.-->
+            <!--</p>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="single-faq">-->
+          <!--<h3>Quis nostrud exerci tation ullamcorper sus?</h3>-->
+          <!--<span><i class="fa fa-plus"></i></span>-->
+          <!--<div class="single-faq-text">-->
+            <!--<p>-->
+              <!--Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut-->
+              <!--aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud.-->
+            <!--</p>-->
+            <!--<p>-->
+              <!--Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut-->
+              <!--aliquip ex ea commodo consequat.-->
+            <!--</p>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="col-sm-6 faq-box wow fadeInUp">-->
+        <!--<div class="single-faq">-->
+          <!--<h3>Sed do eiusmod tempor incididunt ut labore?</h3>-->
+          <!--<span><i class="fa fa-plus"></i></span>-->
+          <!--<div class="single-faq-text">-->
+            <!--<p>-->
+              <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut-->
+              <!--labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.-->
+            <!--</p>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="single-faq">-->
+          <!--<h3>Quis nostrud exerci tation ullamcorper suscip?</h3>-->
+          <!--<span><i class="fa fa-plus"></i></span>-->
+          <!--<div class="single-faq-text">-->
+            <!--<p>-->
+              <!--Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut-->
+              <!--aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud.-->
+            <!--</p>-->
+            <!--<p>-->
+              <!--Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut-->
+              <!--aliquip ex ea commodo consequat.-->
+            <!--</p>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="single-faq">-->
+          <!--<h3>Ut wisi enim ad minim veniam, quis nostrud?</h3>-->
+          <!--<span><i class="fa fa-plus"></i></span>-->
+          <!--<div class="single-faq-text">-->
+            <!--<p>-->
+              <!--Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut-->
+              <!--aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.-->
+            <!--</p>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
 
 <!-- Call to action -->
-<div class="call-to-action-container section-container section-container-full-bg">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 call-to-action section-description wow fadeIn">
-        <h2>Download it now</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12 call-to-action-button wow fadeInUp">
-        <a class="button-1" href="#">
-          <span class="button-1-left"><i class="fa fa-mobile"></i></span>
-                         	<span class="button-1-right">
-                         		<span class="button-1-right-top">Available on the</span>
-                         		<span class="button-1-right-bottom">App Store</span>
-                         	</span>
-        </a>
-        <a class="button-2" href="#">
-          <span class="button-2-left"><i class="fa fa-android"></i></span>
-                         	<span class="button-2-right">
-                         		<span class="button-2-right-top">Get it now for</span>
-                         		<span class="button-2-right-bottom">Android</span>
-                         	</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
+<!--<div class="call-to-action-container section-container section-container-full-bg">-->
+  <!--<div class="container">-->
+    <!--<div class="row">-->
+      <!--<div class="col-sm-12 call-to-action section-description wow fadeIn">-->
+        <!--<h2>Download it now</h2>-->
+        <!--<p>-->
+          <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut-->
+          <!--labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.-->
+        <!--</p>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+      <!--<div class="col-sm-12 call-to-action-button wow fadeInUp">-->
+        <!--<a class="button-1" href="#">-->
+          <!--<span class="button-1-left"><i class="fa fa-mobile"></i></span>-->
+                         	<!--<span class="button-1-right">-->
+                         		<!--<span class="button-1-right-top">Available on the</span>-->
+                         		<!--<span class="button-1-right-bottom">App Store</span>-->
+                         	<!--</span>-->
+        <!--</a>-->
+        <!--<a class="button-2" href="#">-->
+          <!--<span class="button-2-left"><i class="fa fa-android"></i></span>-->
+                         	<!--<span class="button-2-right">-->
+                         		<!--<span class="button-2-right-top">Get it now for</span>-->
+                         		<!--<span class="button-2-right-bottom">Android</span>-->
+                         	<!--</span>-->
+        <!--</a>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; Testimonials &ndash;&gt;-->
+<!--<div class="testimonials-container section-container">-->
+  <!--<div class="container">-->
+    <!--<div class="row">-->
+      <!--<div class="col-sm-12 testimonials section-description wow fadeIn">-->
+        <!--<h2>Our clients</h2>-->
+        <!--<div class="testimonial-active"></div>-->
+        <!--<div class="testimonial-quote">&ldquo; &rdquo;</div>-->
+        <!--<div class="testimonial-single">-->
+          <!--<p>-->
+            <!--Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit-->
+            <!--lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam,-->
+            <!--quis nostrud exerci tation ullamcorper suscipit lobortis nisl.-->
+            <!--<br>-->
+            <!--<a href="">John Doe, johndoe.com</a>-->
+          <!--</p>-->
+          <!--<div class="testimonial-single-image">-->
+            <!--<img src="assets/img/testimonials/1.jpg" alt="" data-at2x="assets/img/testimonials/1.jpg">-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="testimonial-single">-->
+          <!--<p>-->
+            <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt-->
+            <!--ut labore et. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor-->
+            <!--incididunt ut labore et.-->
+            <!--<br>-->
+            <!--<a href="">Jane Jonsson, blog.jane.com</a>-->
+          <!--</p>-->
+          <!--<div class="testimonial-single-image">-->
+            <!--<img src="assets/img/testimonials/2.jpg" alt="" data-at2x="assets/img/testimonials/2.jpg">-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="testimonial-single">-->
+          <!--<p>-->
+            <!--Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit-->
+            <!--lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam,-->
+            <!--quis nostrud exerci tation ullamcorper suscipit lobortis nisl.-->
+            <!--<br>-->
+            <!--<a href="">John Doe, johndoe.com</a>-->
+          <!--</p>-->
+          <!--<div class="testimonial-single-image">-->
+            <!--<img src="assets/img/testimonials/3.jpg" alt="" data-at2x="assets/img/testimonials/3.jpg">-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="testimonial-single">-->
+          <!--<p>-->
+            <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt-->
+            <!--ut labore et. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor-->
+            <!--incididunt ut labore et.-->
+            <!--<br>-->
+            <!--<a href="">Jane Jonsson, blog.jane.com</a>-->
+          <!--</p>-->
+          <!--<div class="testimonial-single-image">-->
+            <!--<img src="assets/img/testimonials/4.jpg" alt="" data-at2x="assets/img/testimonials/4.jpg">-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; Call to action &ndash;&gt;-->
+<!--<div class="call-to-action-container section-container section-container-full-bg">-->
+  <!--<div class="container">-->
+    <!--<div class="row">-->
+      <!--<div class="col-sm-12 call-to-action section-description wow fadeIn">-->
+        <!--<h2>Download it now</h2>-->
+        <!--<p>-->
+          <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut-->
+          <!--labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.-->
+        <!--</p>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+      <!--<div class="col-sm-12 call-to-action-button wow fadeInUp">-->
+        <!--<a class="button-1" href="#">-->
+          <!--<span class="button-1-left"><i class="fa fa-mobile"></i></span>-->
+                         	<!--<span class="button-1-right">-->
+                         		<!--<span class="button-1-right-top">Available on the</span>-->
+                         		<!--<span class="button-1-right-bottom">App Store</span>-->
+                         	<!--</span>-->
+        <!--</a>-->
+        <!--<a class="button-2" href="#">-->
+          <!--<span class="button-2-left"><i class="fa fa-android"></i></span>-->
+                         	<!--<span class="button-2-right">-->
+                         		<!--<span class="button-2-right-top">Get it now for</span>-->
+                         		<!--<span class="button-2-right-bottom">Android</span>-->
+                         	<!--</span>-->
+        <!--</a>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
 
 <!-- About us -->
-<div class="about-us-container section-container">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 about-us section-description wow fadeIn">
-        <h2>About our team</h2>
-        <p>
-          Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-          aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud.
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-4 about-us-box wow fadeInUp">
-        <div class="about-us-photo">
-          <img src="assets/img/team/1.jpg" alt="" data-at2x="assets/img/team/1.jpg">
-        </div>
-        <h3>John Doe</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-        <div class="about-us-social">
-          <a class="ultm ultm-facebook ultm-32 ultm-square ultm-color-to-gray" href=""></a>
-          <a class="ultm ultm-dribbble ultm-32 ultm-square ultm-color-to-gray" href=""></a>
-          <a class="ultm ultm-twitter ultm-32 ultm-square ultm-color-to-gray" href=""></a>
-        </div>
-      </div>
-      <div class="col-sm-4 about-us-box wow fadeInDown">
-        <div class="about-us-photo">
-          <img src="assets/img/team/2.jpg" alt="" data-at2x="assets/img/team/2.jpg">
-        </div>
-        <h3>Tim Brown</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-        <div class="about-us-social">
-          <a class="ultm ultm-facebook ultm-32 ultm-square ultm-color-to-gray" href=""></a>
-          <a class="ultm ultm-dribbble ultm-32 ultm-square ultm-color-to-gray" href=""></a>
-          <a class="ultm ultm-twitter ultm-32 ultm-square ultm-color-to-gray" href=""></a>
-        </div>
-      </div>
-      <div class="col-sm-4 about-us-box wow fadeInUp">
-        <div class="about-us-photo">
-          <img src="assets/img/team/3.jpg" alt="" data-at2x="assets/img/team/3.jpg">
-        </div>
-        <h3>Sarah Red</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-        <div class="about-us-social">
-          <a class="ultm ultm-facebook ultm-32 ultm-square ultm-color-to-gray" href=""></a>
-          <a class="ultm ultm-dribbble ultm-32 ultm-square ultm-color-to-gray" href=""></a>
-          <a class="ultm ultm-twitter ultm-32 ultm-square ultm-color-to-gray" href=""></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<!--<div class="about-us-container section-container">-->
+  <!--<div class="container">-->
+    <!--<div class="row">-->
+      <!--<div class="col-sm-12 about-us section-description wow fadeIn">-->
+        <!--<h2>About our team</h2>-->
+        <!--<p>-->
+          <!--Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut-->
+          <!--aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud.-->
+        <!--</p>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+      <!--<div class="col-sm-4 about-us-box wow fadeInUp">-->
+        <!--<div class="about-us-photo">-->
+          <!--<img src="assets/img/team/1.jpg" alt="" data-at2x="assets/img/team/1.jpg">-->
+        <!--</div>-->
+        <!--<h3>John Doe</h3>-->
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>-->
+        <!--<div class="about-us-social">-->
+          <!--<a class="ultm ultm-facebook ultm-32 ultm-square ultm-color-to-gray" href=""></a>-->
+          <!--<a class="ultm ultm-dribbble ultm-32 ultm-square ultm-color-to-gray" href=""></a>-->
+          <!--<a class="ultm ultm-twitter ultm-32 ultm-square ultm-color-to-gray" href=""></a>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="col-sm-4 about-us-box wow fadeInDown">-->
+        <!--<div class="about-us-photo">-->
+          <!--<img src="assets/img/team/2.jpg" alt="" data-at2x="assets/img/team/2.jpg">-->
+        <!--</div>-->
+        <!--<h3>Tim Brown</h3>-->
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>-->
+        <!--<div class="about-us-social">-->
+          <!--<a class="ultm ultm-facebook ultm-32 ultm-square ultm-color-to-gray" href=""></a>-->
+          <!--<a class="ultm ultm-dribbble ultm-32 ultm-square ultm-color-to-gray" href=""></a>-->
+          <!--<a class="ultm ultm-twitter ultm-32 ultm-square ultm-color-to-gray" href=""></a>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="col-sm-4 about-us-box wow fadeInUp">-->
+        <!--<div class="about-us-photo">-->
+          <!--<img src="assets/img/team/3.jpg" alt="" data-at2x="assets/img/team/3.jpg">-->
+        <!--</div>-->
+        <!--<h3>Sarah Red</h3>-->
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>-->
+        <!--<div class="about-us-social">-->
+          <!--<a class="ultm ultm-facebook ultm-32 ultm-square ultm-color-to-gray" href=""></a>-->
+          <!--<a class="ultm ultm-dribbble ultm-32 ultm-square ultm-color-to-gray" href=""></a>-->
+          <!--<a class="ultm ultm-twitter ultm-32 ultm-square ultm-color-to-gray" href=""></a>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
 
 <!-- divider -->
 <div class="divider-1">~</div>
@@ -459,14 +466,14 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 subscribe section-description wow fadeIn">
-        <h2>Email updates</h2>
-        <p>Sign up now to our newsletter and you'll be one of the first to know about new updates:</p>
+        <h2>ДЕТАЛЬНАЯ ПРЕЗЕНТАЦИЯ</h2>
+        <p>Оставьте свою почту и мы пришлем вам презентацию с детальным описанием компонентов решения:</p>
         <form class="form-inline" role="form" action="assets/subscribe.php" method="post">
           <div class="form-group">
             <label class="sr-only" for="subscribe-email">Email address</label>
-            <input type="text" name="email" placeholder="Enter your email..." class="subscribe-email form-control" id="subscribe-email">
+            <input type="text" name="email" placeholder="Ваша почта..." class="subscribe-email form-control" id="subscribe-email">
           </div>
-          <button type="submit" class="btn">Subscribe</button>
+          <button type="submit" class="btn">Пришлите мне детали!</button>
         </form>
         <div class="success-message"></div>
         <div class="error-message"></div>
@@ -480,37 +487,37 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 contact section-description wow fadeIn">
-        <h2>Contact us</h2>
+        <h2>КОНТАКТЫ</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+          Мы будем рады вашему звонку или письму. <br/>
+          Мы готовы провети для вас персональную презентацию и подготовить предложение с учетом всех ваших текущих целей и задач.
         </p>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-7 contact-form wow fadeInLeft">
-        <h3>Send us a message</h3>
+        <h3>Отправить сообщение</h3>
         <form role="form" action="assets/contact.php" method="post">
           <div class="form-group">
             <label class="sr-only" for="contact-email">Email</label>
             <input type="text" name="email" placeholder="Email..." class="contact-email form-control" id="contact-email">
           </div>
           <div class="form-group">
-            <label class="sr-only" for="contact-subject">Subject</label>
-            <input type="text" name="subject" placeholder="Subject..." class="contact-subject form-control" id="contact-subject">
+            <label class="sr-only" for="contact-subject">Тема</label>
+            <input type="text" name="subject" placeholder="Тема..." class="contact-subject form-control" id="contact-subject">
           </div>
           <div class="form-group">
-            <label class="sr-only" for="contact-message">Message</label>
-            <textarea name="message" placeholder="Message..." class="contact-message form-control" id="contact-message"></textarea>
+            <label class="sr-only" for="contact-message">Сообщение</label>
+            <textarea name="message" placeholder="Сообщение..." class="contact-message form-control" id="contact-message"></textarea>
           </div>
-          <button type="submit" class="btn">Send message</button>
+          <button type="submit" class="btn">Отправить сообщение</button>
         </form>
       </div>
       <div class="col-sm-5 contact-address wow fadeInUp">
-        <h3>Contact details</h3>
-        <p><i class="fa fa-map-marker"></i>Via Principe Amedeo 9, 10100, Torino, TO, Italy</p>
-        <p><i class="fa fa-phone"></i>Phone: 0039 333 12 68 347</p>
-        <p><i class="fa fa-envelope"></i>Email: <a href="">contact@yourdomain.com</a></p>
+        <h3>Контактная информация</h3>
+        <p><i class="fa fa-map-marker"></i>Россия, Москва, ул. Правды, 8</p>
+        <p><i class="fa fa-phone"></i>Телефон: +7 (495) 777 7777</p>
+        <p><i class="fa fa-envelope"></i>Email: <a href="mailto:hello@m2b.co">hello@m2b.co</a></p>
       </div>
     </div>
   </div>
@@ -521,14 +528,16 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-7 footer-copyright">
-        &copy; Aeria Bootstrap Template by <a href="http://azmind.com">Azmind</a>.
+        &copy;2015 <a href="//m2b.co">Mobile 2 Business</a>.
       </div>
       <div class="col-sm-5 footer-social">
-        <a class="ultm ultm-facebook ultm-32 ultm-square ultm-color-to-gray" href=""></a>
-        <a class="ultm ultm-dribbble ultm-32 ultm-square ultm-color-to-gray" href=""></a>
-        <a class="ultm ultm-twitter ultm-32 ultm-square ultm-color-to-gray" href=""></a>
-        <a class="ultm ultm-google-plus-1 ultm-32 ultm-square ultm-color-to-gray" href=""></a>
-        <a class="ultm ultm-pinterest ultm-32 ultm-square ultm-color-to-gray" href=""></a>
+        <a class="ultm ultm-facebook ultm-32 ultm-square ultm-color-to-gray text-center" href="https://www.facebook.com/groups/mobile2business/" style="line-height: 36px;">
+          <i class="fa fa-facebook" style="font-size: 20px; color: #ffffff;"></i>
+        </a>
+        <!--<a class="ultm ultm-dribbble ultm-32 ultm-square ultm-color-to-gray" href=""></a>-->
+        <!--<a class="ultm ultm-twitter ultm-32 ultm-square ultm-color-to-gray" href=""></a>-->
+        <!--<a class="ultm ultm-google-plus-1 ultm-32 ultm-square ultm-color-to-gray" href=""></a>-->
+        <!--<a class="ultm ultm-pinterest ultm-32 ultm-square ultm-color-to-gray" href=""></a>-->
       </div>
     </div>
   </div>
