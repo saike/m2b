@@ -234,7 +234,7 @@ jQuery(document).ready(function() {
 
     testObject.save(
       {
-        email: form.value
+        email: form[0].value
       }
     ).then(function(object) {
 //        if(json.valid == 0) {
