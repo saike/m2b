@@ -5,7 +5,7 @@
 <head>
 
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mobile To Business</title>
 
@@ -34,6 +34,8 @@
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/favicomatic/apple-touch-icon-114x114.png">
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/favicomatic/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon-precomposed" href="assets/img/favicomatic/apple-touch-icon-57x57.png">
+
+  <script src="//www.parsecdn.com/js/parse-1.4.2.min.js"></script>
 
 </head>
 
@@ -470,10 +472,10 @@
       <div class="col-sm-12 subscribe section-description wow fadeIn">
         <h2>Нужна презентация?</h2>
         <p>Оставьте свою почту и мы пришлем вам презентацию пакета <strong>M2B Start</strong> с детальным описанием компонентов решения. Хотите персональную презентацию и коммерческое предложение? Оставьте свой номер и мы перезвоним вам!</p>
-        <form class="form-inline" role="form" action="assets/subscribe.php" method="post">
+        <form class="form-inline pres_form" role="form">
           <div class="form-group">
             <label class="sr-only" for="subscribe-email">Email address</label>
-            <input type="text" name="email" placeholder="Ваша почта..." class="subscribe-email form-control" id="subscribe-email">
+            <input type="email" name="email" placeholder="Ваша почта..." class="subscribe-email form-control" id="subscribe-email" required="true">
           </div>
           <button type="submit" class="btn">Пришлите мне детали!</button>
         </form>
@@ -499,10 +501,10 @@
     <div class="row">
       <div class="col-sm-7 contact-form wow fadeInLeft">
         <h3>Отправить сообщение</h3>
-        <form role="form" action="assets/contact.php" method="post">
+        <form class="callback_form" role="form" method="post">
           <div class="form-group">
             <label class="sr-only" for="contact-email">Email</label>
-            <input type="text" name="email" placeholder="Email..." class="contact-email form-control" id="contact-email">
+            <input type="email" name="email" placeholder="Email..." class="contact-email form-control" id="contact-email" required="true">
           </div>
           <div class="form-group">
             <label class="sr-only" for="contact-subject">Тема</label>
@@ -510,7 +512,7 @@
           </div>
           <div class="form-group">
             <label class="sr-only" for="contact-message">Сообщение</label>
-            <textarea name="message" placeholder="Сообщение..." class="contact-message form-control" id="contact-message"></textarea>
+            <textarea name="message" placeholder="Сообщение..." class="contact-message form-control" id="contact-message" required="true"></textarea>
           </div>
           <button type="submit" class="btn">Отправить сообщение</button>
         </form>
@@ -536,10 +538,6 @@
         <a class="ultm ultm-facebook ultm-32 ultm-square ultm-color-to-gray text-center" href="https://www.facebook.com/groups/mobile2business/" style="line-height: 36px;">
           <i class="fa fa-facebook" style="font-size: 20px; color: #ffffff;"></i>
         </a>
-        <!--<a class="ultm ultm-dribbble ultm-32 ultm-square ultm-color-to-gray" href=""></a>-->
-        <!--<a class="ultm ultm-twitter ultm-32 ultm-square ultm-color-to-gray" href=""></a>-->
-        <!--<a class="ultm ultm-google-plus-1 ultm-32 ultm-square ultm-color-to-gray" href=""></a>-->
-        <!--<a class="ultm ultm-pinterest ultm-32 ultm-square ultm-color-to-gray" href=""></a>-->
       </div>
     </div>
   </div>
@@ -557,11 +555,8 @@
 <script src="assets/js/placeholder.js"></script>
 <![endif]-->
 
-<!--<link rel="stylesheet" href="//cdn.callbackhunter.com/widget/tracker.css">-->
-<!--<script type="text/javascript" src="//cdn.callbackhunter.com/widget/tracker.js" charset="UTF-8"></script>-->
-<!--<script type="text/javascript">var hunter_code="863c80a59de056690d1629016d095da0";</script>-->
-<link rel="stylesheet" href="//callbackhunter.com/widget2/tracker_uncompressed.css">
-<script type="text/javascript" src="//callbackhunter.com/widget2/work/v2/widget.min.js" charset="UTF-8" async></script>
+<link rel="stylesheet" href="//cdn.callbackhunter.com/widget/tracker.css">
+<script type="text/javascript" src="//cdn.callbackhunter.com/widget/tracker.js" charset="UTF-8"></script>
 <script type="text/javascript">var hunter_code="863c80a59de056690d1629016d095da0";</script>
 
 </body>

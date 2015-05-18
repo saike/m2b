@@ -494,9 +494,9 @@ footer {
 .inner_screen {
     position: absolute;
     left: 8.9%;
-    top: 22.7%;
+    top: 19.4%;
     width: 83.4%;
-    height: 103%;
+    height: 99%;
     border-radius: 1px;
 }
 
@@ -504,4 +504,28 @@ footer {
     width: 180px;
     height: auto;
     margin: -10px auto -10px auto;
+}
+
+.cbh-widget-rating, .cbh-icon-dialog, .clbh_banner-work-to {
+    display: none !important;
+}
+
+.cbh-icons {
+    text-align: center !important;
+}
+
+.cbh-icon {
+    display: inline-block;
+    float: none !important;
+}
+
+.cbh-bg-icon {
+    background-color: #3abfc3 !important;
+}
+.cbh-bg-icon:after {
+    border-color: transparent transparent transparent #3abfc3 !important;
+}
+
+.contact-form input{
+    color: #000000;
 }

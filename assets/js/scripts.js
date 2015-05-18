@@ -17,6 +17,9 @@ jQuery(document).ready(function() {
 	/*
 	    Navigation
 	*/
+  //initialize parse app
+  Parse.initialize("6c7PoiqrEQcqfOArTl1v1LertvT6CyjmvcWecxEu", "eVZsJCCgr5fC27FZXOio9hk9oKXiFRijo1La8Gt6");
+
 	$('a.scroll-link').on('click', function(e) {
 		e.preventDefault();
 		scroll_to($(this), $('nav').height());
@@ -82,31 +85,31 @@ jQuery(document).ready(function() {
 	$('.success-message').hide();
 	$('.error-message').hide();
 	
-	$('.subscribe form').submit(function(e) {
-		e.preventDefault();
-	    var postdata = $('.subscribe form').serialize();
-	    $.ajax({
-	        type: 'POST',
-	        url: 'assets/subscribe.php',
-	        data: postdata,
-	        dataType: 'json',
-	        success: function(json) {
-	            if(json.valid == 0) {
-	                $('.success-message').hide();
-	                $('.error-message').hide();
-	                $('.error-message').html(json.message);
-	                $('.error-message').fadeIn();
-	            }
-	            else {
-	                $('.error-message').hide();
-	                $('.success-message').hide();
-	                $('.subscribe form').hide();
-	                $('.success-message').html(json.message);
-	                $('.success-message').fadeIn();
-	            }
-	        }
-	    });
-	});
+//	$('.subscribe form').submit(function(e) {
+//		e.preventDefault();
+//	    var postdata = $('.subscribe form').serialize();
+//	    $.ajax({
+//	        type: 'POST',
+//	        url: 'assets/subscribe.php',
+//	        data: postdata,
+//	        dataType: 'json',
+//	        success: function(json) {
+//	            if(json.valid == 0) {
+//	                $('.success-message').hide();
+//	                $('.error-message').hide();
+//	                $('.error-message').html(json.message);
+//	                $('.error-message').fadeIn();
+//	            }
+//	            else {
+//	                $('.error-message').hide();
+//	                $('.success-message').hide();
+//	                $('.subscribe form').hide();
+//	                $('.success-message').html(json.message);
+//	                $('.success-message').fadeIn();
+//	            }
+//	        }
+//	    });
+//	});
 	
 	/*
 	    Contact form
@@ -114,35 +117,35 @@ jQuery(document).ready(function() {
 	$('.contact-form form input[type="text"], .contact-form form textarea').on('focus', function() {
 		$('.contact-form form input[type="text"], .contact-form form textarea').removeClass('contact-error');
 	});
-	$('.contact-form form').submit(function(e) {
-		e.preventDefault();
-	    $('.contact-form form input[type="text"], .contact-form form textarea').removeClass('contact-error');
-	    var postdata = $('.contact-form form').serialize();
-	    $.ajax({
-	        type: 'POST',
-	        url: 'assets/contact.php',
-	        data: postdata,
-	        dataType: 'json',
-	        success: function(json) {
-	            if(json.emailMessage != '') {
-	                $('.contact-form form .contact-email').addClass('contact-error');
-	            }
-	            if(json.subjectMessage != '') {
-	                $('.contact-form form .contact-subject').addClass('contact-error');
-	            }
-	            if(json.messageMessage != '') {
-	                $('.contact-form form textarea').addClass('contact-error');
-	            }
-	            if(json.emailMessage == '' && json.subjectMessage == '' && json.messageMessage == '') {
-	                $('.contact-form form').fadeOut('fast', function() {
-	                    $('.contact-form').append('<p>Thanks for contacting us! We will get back to you very soon.</p>');
-	                    // reload background
-	    				$('.contact-container').backstretch("resize");
-	                });
-	            }
-	        }
-	    });
-	});
+//	$('.contact-form form').submit(function(e) {
+//		e.preventDefault();
+//	    $('.contact-form form input[type="text"], .contact-form form textarea').removeClass('contact-error');
+//	    var postdata = $('.contact-form form').serialize();
+//	    $.ajax({
+//	        type: 'POST',
+//	        url: 'assets/contact.php',
+//	        data: postdata,
+//	        dataType: 'json',
+//	        success: function(json) {
+//	            if(json.emailMessage != '') {
+//	                $('.contact-form form .contact-email').addClass('contact-error');
+//	            }
+//	            if(json.subjectMessage != '') {
+//	                $('.contact-form form .contact-subject').addClass('contact-error');
+//	            }
+//	            if(json.messageMessage != '') {
+//	                $('.contact-form form textarea').addClass('contact-error');
+//	            }
+//	            if(json.emailMessage == '' && json.subjectMessage == '' && json.messageMessage == '') {
+//	                $('.contact-form form').fadeOut('fast', function() {
+//	                    $('.contact-form').append('<p>Thanks for contacting us! We will get back to you very soon.</p>');
+//	                    // reload background
+//	    				$('.contact-container').backstretch("resize");
+//	                });
+//	            }
+//	        }
+//	    });
+//	});
 
   //our code
   var gif = document.createElement('img');
@@ -196,8 +199,62 @@ jQuery(document).ready(function() {
     }
   }
 
+  $('.callback_form').on('submit', function(e){
 
-    
+    e.preventDefault();
+
+    var TestObject = Parse.Object.extend("Message");
+    var testObject = new TestObject();
+
+    testObject.save(
+      {
+        email: this[0].value,
+        subject: this[1].value,
+        message: this[2].value
+      }
+    ).then(function(object) {
+        $('.contact-form form').fadeOut('fast', function() {
+          $('.contact-form').append('<p>Ваше сообщение отправлено. Мы сделаем все, чтобы ответить на него в течение 45 минут</p>');
+          // reload background
+          $('.contact-container').backstretch("resize");
+        });
+    });
+
+    return false;
+  });
+
+  $('.pres_form').on('submit', function(e){
+
+    e.preventDefault();
+
+    var TestObject = Parse.Object.extend("Presentation");
+    var testObject = new TestObject();
+
+    var form = this;
+
+    testObject.save(
+      {
+        email: form.value
+      }
+    ).then(function(object) {
+//        if(json.valid == 0) {
+//          $('.success-message').hide();
+//          $('.error-message').hide();
+//          $('.error-message').html(json.message);
+//          $('.error-message').fadeIn();
+//        }
+//        else {
+          $('.error-message').hide();
+          $('.success-message').hide();
+          $('.subscribe form').hide();
+          $('.success-message').html('Спасибо. Мы вышлем Вам презентацию в ближайшее время на адрес: ' + form[0].value);
+          $('.success-message').fadeIn();
+//        }
+      });
+
+    return false;
+  });
+
 });
 
 
