@@ -18,7 +18,7 @@ jQuery(document).ready(function() {
 	    Navigation
 	*/
   //initialize parse app
-  Parse.initialize("6c7PoiqrEQcqfOArTl1v1LertvT6CyjmvcWecxEu", "eVZsJCCgr5fC27FZXOio9hk9oKXiFRijo1La8Gt6");
+//  Parse.initialize("6c7PoiqrEQcqfOArTl1v1LertvT6CyjmvcWecxEu", "eVZsJCCgr5fC27FZXOio9hk9oKXiFRijo1La8Gt6");
 
 	$('a.scroll-link').on('click', function(e) {
 		e.preventDefault();
@@ -203,57 +203,68 @@ jQuery(document).ready(function() {
 
     e.preventDefault();
 
-    var TestObject = Parse.Object.extend("Message");
-    var testObject = new TestObject();
+    var form = this;
 
-    testObject.save(
-      {
-        email: this[0].value,
-        subject: this[1].value,
-        message: this[2].value
+    $.ajax({
+      url: 'https://api.kickofflabs.com/v1/48063/subscribe',
+      data: $(form).serialize(),
+      dataType: 'jsonp',
+      jsonp: 'jsonp',
+      jsonpCallback: 'message_callback',
+      timeout: 2000,
+      error: function() {
+        var message = 'Возникла ошибка при отправке сообщения';
+        alert(message);
       }
-    ).then(function(object) {
-        $('.contact-form form').fadeOut('fast', function() {
-          $('.contact-form').append('<p>Ваше сообщение отправлено. Мы сделаем все, чтобы ответить на него в течение 45 минут</p>');
-          // reload background
-          $('.contact-container').backstretch("resize");
-        });
     });
 
     return false;
   });
 
+  window.message_callback = function(data)
+  {
+    console.dir(data);
+    $('.contact-form form').fadeOut('fast', function() {
+      $('.contact-form').append('<p>Ваше сообщение отправлено. Мы сделаем все, чтобы ответить на него в течение 45 минут.</p>');
+      // reload background
+      $('.contact-container').backstretch("resize");
+    });
+  };
+
   $('.pres_form').on('submit', function(e){
 
     e.preventDefault();
 
-    var TestObject = Parse.Object.extend("Presentation");
-    var testObject = new TestObject();
-
     var form = this;
 
-    testObject.save(
-      {
-        email: form[0].value
+    $.ajax({
+      url: 'https://api.kickofflabs.com/v1/48064/subscribe',
+      data: $(form).serialize(),
+      dataType: 'jsonp',
+      jsonp: 'jsonp',
+      jsonpCallback: 'request_callback',
+      timeout: 2000,
+      error: function() {
+        var message = 'Возникла ошибка при запросе, попробуйте еще раз';
+        $('.success-message').hide();
+        $('.error-message').hide();
+        $('.error-message').html(message);
+        $('.error-message').fadeIn();
       }
-    ).then(function(object) {
-//        if(json.valid == 0) {
-//          $('.success-message').hide();
-//          $('.error-message').hide();
-//          $('.error-message').html(json.message);
-//          $('.error-message').fadeIn();
-//        }
-//        else {
-          $('.error-message').hide();
-          $('.success-message').hide();
-          $('.subscribe form').hide();
-          $('.success-message').html('Спасибо. Мы вышлем Вам презентацию в ближайшее время на адрес: ' + form[0].value);
-          $('.success-message').fadeIn();
-//        }
-      });
+    });
 
     return false;
   });
+
+  window.request_callback = function(data)
+  {
+    console.dir(data);
+    $('.error-message').hide();
+    $('.success-message').hide();
+    $('.subscribe form').hide();
+    $('.success-message').html('Спасибо. Мы вышлем Вам презентацию в ближайшее время на адрес: ' + data.email);
+    $('.success-message').fadeIn();
+  };
 
 });
 
