@@ -214,7 +214,7 @@ jQuery(document).ready(function() {
       }
     ).then(function(object) {
         $('.contact-form form').fadeOut('fast', function() {
-          $('.contact-form').append('<p>Ваше сообщение отправлено. Мы сделаем все, чтобы ответить на него в течение 45 минут</p>');
+          $('.contact-form').append('<p>Ваше сообщение отправлено. Мы сделаем все, чтобы ответить на него в течение 45 минут.</p>');
           // reload background
           $('.contact-container').backstretch("resize");
         });
